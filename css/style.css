@@ -13,8 +13,8 @@
     --color-line-direction-item: #EEEEEE;
 }
 
-.body {
-    color: var(--color-primary-text);
+body {
+    color: var(--color-title-text);
     font-family: "Roboto", sans-serif;
     background-color: var(--color-white-background);
     font-size: 14px;
@@ -285,28 +285,30 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opacity250ms cubic-bezier(0.4, 0, 0.2, 1) visіbility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-    visibility: hidden;
+   
 }
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.1);
 }
 .modal {
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
 
     min-width: 528px;
-    min-height: 581px;
-
+    min-height: 521px;
+    padding: 40px;
     background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -321,6 +323,11 @@
     padding: 6px;
     background-color: #ffffff;
 }
+.botton-close:hover .x-close,
+.botton-close:focus .x-close {
+    fill: var(--color-action);
+}
+
 .x-close {
     width: 18px;
     height: 18px;
